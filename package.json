@@ -1,17 +1,35 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "Product-Information-Service",
+  "description": "> Project description",
   "author": "",
-  "license": "",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
+    "-": "0.0.1",
+    "D": "^1.0.0",
+    "eslint-config-airbnb-base": "^14.2.0"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react-hooks": "^4.1.2"
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Team-Structure/Product-Information-Service.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Team-Structure/Product-Information-Service/issues"
+  },
+  "homepage": "https://github.com/Team-Structure/Product-Information-Service#readme"
 }
