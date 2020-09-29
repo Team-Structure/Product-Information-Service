@@ -14,14 +14,11 @@ module.exports = {
     modules: [node, 'node_modules'],
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?/,
         include: src,
         loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
-        },
       },
     ],
   },

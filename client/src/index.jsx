@@ -22,6 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <form>
+        <div> Hello </div>
         <input
           type="text"
           value={this.state.value}
