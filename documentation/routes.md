@@ -40,7 +40,7 @@ URL: api/product
 
 Request: product_Id
 
-Response: product_Id, description, title, brand, category, specs, reivew, price, video
+Response: product_Id, description, title, brand, category, specs
 
 ------------------------------------------------------------------------
 
