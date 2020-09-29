@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/Product', {
-  useMongoClient: true;
+  useMongoClient: true,
 });
 
 const db = mongoose.connection;
 
-db.on('error', function() {
+db.on('error', () => {
   console.log('mongoose connection error ');
 });
 
-db.once('open', function() {
+db.once('open', () => {
   console.log('mongoose connected successfully');
 });
 
@@ -18,27 +18,25 @@ const product = new Schema({
   product_Id: Number,
   description: {
     language: String,
-    value: String
+    value: String,
   },
   title: String,
   brand: [{
     id: Number,
-    name: String
+    name: String,
   }],
   category: {
     id: Number,
     name: String,
     age: String,
-    player_Count: [String]
+    player_Count: [String],
   },
 
   specs: {
-   part_Number: [String],
+    part_Number: [String],
     GTIN: Number,
-  }
-
+  },
 
 });
-
 
 module.exports = mongoose.model('Product', product);
