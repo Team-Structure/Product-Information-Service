@@ -14,7 +14,7 @@ db.once('open', () => {
   console.log('mongoose connected successfully');
 });
 
-const product = new Schema({
+const product = mongoose.Schema({
   product_Id: Number,
   description: {
     language: String,
