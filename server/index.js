@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 3004;
 const app = express();
 const client = path.join(__dirname, '/../client/dist');
 app.use(express.static(client));
+app.get('/', (req, res) => {
+  res.end();
+});
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`);
 });
