@@ -9,13 +9,6 @@ mongoose.connect('mongodb://localhost/Product')
   .then(() => console.log('Connected to MongoDB!'))
   .catch((err) => console.error("Coudn't connect MongoDB:", err));
 
-const replaceCollection = () => {
-  mongoose.Product.listCollections({ name: 'product' }).next((err, exists) => {
-    if (exists) {
-      mongoose.Product.deleteMany({});
-    }
-  });
-};
 const products = [];
 const descriptionChoice = ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'Nunc quis aliquet ex', 'vitae porta massa', 'Donec congue turpis est', 'nec molestie risus auctor vel', 'Sed ornare bibendum varius', 'Etiam maximus nulla tristique pulvinar auctor', 'Fusce sed nulla tempor', 'eleifend justo a', 'interdum ante', 'Curabitur in blandit diam', 'Aenean vehicula congue tortor', 'a malesuada tortor sodales eget', 'Vestibulum eu ultricies eros', 'Vestibulum a erat vel libero tincidunt semper', 'Suspendisse sollicitudin', 'erat vel fermentum molestie', 'mi nulla sodales ligula', 'eu pretium diam libero ullamcorper ante', 'Morbi lacinia ultrices neque vel accumsan', 'Vestibulum finibus arcu in nibh eleifend ullamcorper', 'Vivamus eleifend sed nulla nec tempor', 'Sed pretium', 'arcu luctus ornare euismod', 'diam orci auctor libero'];
 
@@ -69,7 +62,6 @@ function insertProducts() {
 }
 
 const seed = async () => {
-  // await replaceCollection();
   await Product.deleteMany({});
   await createNewProducts();
   await insertProducts();
