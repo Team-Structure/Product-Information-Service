@@ -6,4 +6,4 @@ router.get('title/:product_Id');
 router.get('brand/:product_Id');
 
 /* ----------------------- External---------- */
-router.get();
+router.get('reviews/product_id');

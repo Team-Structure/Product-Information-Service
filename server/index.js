@@ -8,6 +8,7 @@ app.use(express.static(client));
 app.get('/', (req, res) => {
   res.send('Working Path');
 });
+// in future app.get /, titlerouter....
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`);
 });
