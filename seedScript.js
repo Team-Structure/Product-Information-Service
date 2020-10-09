@@ -43,9 +43,9 @@ function createNewProducts() {
     productObject.category = {};
     productObject.category.name = categoryName[rand(0, 4)];
     productObject.category.age = (rand(3, 18)).toString();
-    productObject.category.playerCount = playerCount[rand(0, 6)];
+    productObject.category.player_Count = playerCount[rand(0, 6)];
     productObject.specs = {};
-    productObject.specs.partNumber = partNumber[rand(0, 40)] + gtinStr(4);
+    productObject.specs.part_Number = partNumber[rand(0, 40)] + gtinStr(4);
     productObject.specs.GTIN = gtinStr(14);
     products.push(productObject);
   }
