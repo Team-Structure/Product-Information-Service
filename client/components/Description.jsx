@@ -5,7 +5,7 @@ import Header from './Header.jsx';
 
 const DescriptionItemStyle = styled.ul`
   display: flex;
-  justify-content: left;
+
 `;
 const DescriptionListStyle = styled.li`
   display: inline-block

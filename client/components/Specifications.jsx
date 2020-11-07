@@ -8,12 +8,14 @@ const SpecHeadStyle = styled.p`
   margin: 34px 0px 0px 0px;
   font-weight: normal;
   text-transform: capitalize;
+  justify-content: left;
 `;
 
 const SpecBodyStyle = styled.p`
   font-size: 20px;
   margin: 34px 0px 0px 0px;
   font-weight: normal;
+  justify content: left;
   text-transform: capitalize;
   color: #A9A9A9;
   border-bottom: 1px #A9A9A9 solid;

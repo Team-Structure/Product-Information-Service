@@ -37,7 +37,7 @@ margin: 100px 0px 0px-10px
 height: 10 px
 color: #A9A9A9;
 border-top: 1px #A9A9A9 solid;
-width: 100%
+width: 100px
 `;
 
 /*

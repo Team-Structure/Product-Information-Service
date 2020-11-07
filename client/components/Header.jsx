@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const SizingDescription = styled.div`
   display: flex;
+  flex-direction: row;
 `;
 
 const Header = ({ categoryBrand }) => (
