@@ -1,30 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import Title from '../components/Title.jsx';
-import Description from '../components/Description.jsx';
 import Specifications from '../components/Specifications.jsx';
 import staticObj from './Static.js';
 
 const Wrapper = styled.div`
   color: #222;
   font-family: 'Roboto', arial, sans-serif;
-  min-width: 914px;
-  max-width: 1024px;
 `;
 
-class App extends React.Component {
+class SpecsApp extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: '',
-      description: '',
       specsParts: '',
       specsGTIN: 0,
       brand: '',
-      categoryBrand: [],
-      TotalReviews: 0,
     };
   }
 
@@ -33,21 +25,15 @@ class App extends React.Component {
     // const API_REQUEST = process.env.API_REQUEST || 'localhost:3001';
     let id = window.location.pathname.substring(10) || '1';
     id = id.replace('/', '');
-    let reviewID = window.location.pathname.substring(14) || '1';
-    reviewID = reviewID.replace('/', '');
     fetch(`http://3.138.189.215/api/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         const containerObj = data.category;
         containerObj.brand = data.brand;
-        const categoryBrand = Object.values(containerObj);
         const specsParts = data.specs.part_Number;
         const specsGTIN = data.specs.GTIN;
         this.setState({
-          title: data.title || '',
-          description: data.description || '',
           brand: data.brand || '',
-          categoryBrand: categoryBrand || [],
           specsParts: specsParts || '',
           specsGTIN: specsGTIN || 0,
         });
@@ -57,42 +43,24 @@ class App extends React.Component {
         const data = staticObj[id - 1];
         const containerObj = data.category;
         containerObj.brand = data.brand;
-        const categoryBrand = Object.values(containerObj);
         const specsParts = data.specs.part_Number;
         const specsGTIN = data.specs.GTIN;
         this.setState({
-          title: data.title,
-          description: data.description,
+
           brand: data.brand,
-          categoryBrand,
+
           specsParts,
           specsGTIN,
-        });
-      });
-    fetch(`http://18.222.37.28:3001/api/reviews/${reviewID}`)
-      .then((response) => (response.json()))
-      .then((data) => {
-        this.setState({
-          TotalReviews: data.length || 0,
         });
       });
   }
 
   render() {
     const {
-      title, description, brand, specsParts, specsGTIN, categoryBrand, TotalReviews,
+      brand, specsParts, specsGTIN,
     } = this.state;
     return (
       <Wrapper>
-        <div>
-          <Title title={title} TotalReviews={TotalReviews} />
-        </div>
-        <div>
-          <Description
-            description={description}
-            categoryBrand={categoryBrand}
-          />
-        </div>
         <div>
           <Specifications
             specsParts={specsParts}
@@ -106,5 +74,5 @@ class App extends React.Component {
     );
   }
 }
-// separate div elements for each component
-ReactDOM.render(<App />, document.getElementById('product-information') || document.createElement('div'));
+
+ReactDOM.render(<SpecsApp />, document.getElementById('specs') || document.createElement('div'));
