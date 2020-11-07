@@ -11,6 +11,8 @@ const TitleStyle = styled.div`
 const ReviewStyle = styled.p`
 display: inline-block;
 float: left;
+width:200px;
+height:30px
 font-size: 16px;
 color: #A9A9A9;
 

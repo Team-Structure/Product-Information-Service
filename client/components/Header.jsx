@@ -2,10 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const SizingDescription = styled.ul`
+const SizingDescription = styled.div`
   display: flex;
-  margin-block-end: 90px;
-  margin-inline-end: 90px;
 `;
 
 const Header = ({ categoryBrand }) => (

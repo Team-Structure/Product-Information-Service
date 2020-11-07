@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import Header from './Header.jsx';
 
 const DescriptionItemStyle = styled.ul`
-  padding-top: 20px;
+  display: flex;
   justify-content: left;
 `;
 const DescriptionListStyle = styled.li`
-  display: inline-block;
-  float: left
+  display: inline-block
+  list-style-type: none;
+  flex: 0 1 autol
 `;
 
 const DescriptionStyle = styled.div`
@@ -17,7 +18,6 @@ const DescriptionStyle = styled.div`
   flex-wrap: nowrap;
   font-size: 16 px;
   color: #A9A9A9;
-  paddding-top: 100px;
   margin: 50px ;
 `;
 const StyledMore= styled.a`
