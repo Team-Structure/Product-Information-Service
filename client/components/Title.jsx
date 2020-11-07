@@ -38,18 +38,18 @@ const Title = ({ title, TotalReviews, AverageRating }) => (
     {' '}
     {title}
 
-    {/* <StyledStarContainer> */}
+    <StyledStarContainer>
       <ReviewStyle>
-        {/* <StyledStars />
         <StyledStars />
         <StyledStars />
         <StyledStars />
-        <StyledStars /> */}
+        <StyledStars />
+        <StyledStars />
         (
         {TotalReviews}
         )
       </ReviewStyle>
-    {/* </StyledStarContainer> */}
+    </StyledStarContainer>
   </TitleStyle>
 
 );

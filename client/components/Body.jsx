@@ -58,7 +58,9 @@ const Body = ({ specsParts, specsGTIN, brand }) => (
 
       </RowItemStyle>
     </SpecTableStyle>
+
     <BottomBorderStyle />
+
     <SpecTableStyle>
       <RowItemStyle>
         <CellItemStyle1>
@@ -71,12 +73,12 @@ const Body = ({ specsParts, specsGTIN, brand }) => (
       </RowItemStyle>
     </SpecTableStyle>
     <BottomBorderStyle />
+
     <SpecTableStyle>
       <RowItemStyle>
         <CellItemStyle1>
           GTIN
         </CellItemStyle1>
-
         <CellItemStyle2>
           {specsGTIN}
         </CellItemStyle2>
