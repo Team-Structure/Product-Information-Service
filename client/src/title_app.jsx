@@ -27,9 +27,10 @@ class TitleApp extends React.Component {
     // const API_REQUEST = process.env.API_REQUEST || 'localhost:3001';
     let count = 0;
     let sumRatings = 0;
-    let id = window.location.pathname.substring(10) || '1';
+    const location = window.location.pathname.split('/');
+    let id = location[(location.length - 1)] || '1';
     id = id.replace('/', '');
-    let reviewID = window.location.pathname.substring(14) || '1';
+    let reviewID = id || '1';
     reviewID = reviewID.replace('/', '');
     fetch(`http://3.138.189.215/api/products/${id}`)
       .then((response) => response.json())
