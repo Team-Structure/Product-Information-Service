@@ -24,7 +24,8 @@ class DescriptionApp extends React.Component {
   componentDidMount() {
     // const API_URL = process.env.API_URL || 'localhost:3004';
     // const API_REQUEST = process.env.API_REQUEST || 'localhost:3001';
-    let id = window.location.pathname.substring(10) || '1';
+    const location = window.location.pathname.split('/');
+    let id = location[(location.length - 1)] || '1';
     id = id.replace('/', '');
     fetch(`http://3.138.189.215/api/products/${id}`)
       .then((response) => response.json())
