@@ -27,7 +27,7 @@ class SpecsApp extends React.Component {
     // const API_URL = process.env.API_URL || 'localhost:3004';
     // const API_REQUEST = process.env.API_REQUEST || 'localhost:3001';
     const location = window.location.pathname.split('/');
-    let id = location[(location.length - 1)] || '1';
+    let id = location[(location.length - 2)] || '1';
     id = id.replace('/', '');
     fetch(`http://localhost:3004/api/products/${id}`)
       .then((response) => response.json())
