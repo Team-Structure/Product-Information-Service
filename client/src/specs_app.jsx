@@ -29,7 +29,7 @@ class SpecsApp extends React.Component {
     const location = window.location.pathname.split('/');
     let id = location[(location.length - 1)] || '1';
     id = id.replace('/', '');
-    fetch(`http://3.138.189.215/api/products/${id}`)
+    fetch(`http://localhost:3004/api/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         const containerObj = data.category;
