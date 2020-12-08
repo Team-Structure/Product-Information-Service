@@ -27,5 +27,11 @@ build/
 description.js
 title.js
 specs.js
+description.br
+title.br
+specs.br
+description.gz
+title.gz
+specs.gz
 # Config Files
 config.js
