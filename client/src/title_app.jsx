@@ -32,8 +32,8 @@ class TitleApp extends React.Component {
     id = id.replace('/', '');
     let reviewID = id || '1';
     reviewID = reviewID.replace('/', '');
-    // fetch(`http://3.138.189.215:3004/api/products/${id}`)
-    fetch(`http://localhost:3004/api/products/${id}`)
+    fetch(`http://3.138.189.215:3004/api/products/${id}`)
+    // fetch(`http://localhost:3004/api/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         this.setState({

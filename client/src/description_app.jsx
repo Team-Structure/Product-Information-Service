@@ -28,8 +28,8 @@ class DescriptionApp extends React.Component {
     const windowplace = location.pathname.split('/');
     let id = windowplace[(windowplace.length - 2)] || '1';
     id = id.replace('/', '');
-    // fetch(`http://3.138.189.215:3004/api/products/${id}`)
-    fetch(`http://localhost:3004/api/products/${id}`)
+    fetch(`http://3.138.189.215:3004/api/products/${id}`)
+    // fetch(`http://localhost:3004/api/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         const containerObj = data.category;
